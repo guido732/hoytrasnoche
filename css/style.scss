@@ -102,7 +102,12 @@ img {
 .cta {
 	clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% 100%, 0 100%);
 }
-
+.flex {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+}
 // Specific element properties
 nav {
 	position: fixed;
@@ -124,10 +129,8 @@ nav {
 }
 .nav-container {
 	margin: auto;
-	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
 	padding: 1rem 1rem;
 }
 #toggle,
@@ -208,8 +211,6 @@ label {
 	padding: 6rem 0 8rem 0;
 }
 .iframe-container {
-	display: flex;
-	flex-direction: column;
 	width: 100%;
 }
 iframe {
@@ -226,8 +227,6 @@ iframe {
 }
 .invitadxs {
 	.img-container {
-		display: flex;
-		flex-direction: column;
 		width: 100%;
 	}
 }
@@ -235,11 +234,7 @@ iframe {
 
 // }
 .temas {
-	display: flex;
 	width: 100%;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	h2 {
 		align-self: flex-start;
 	}
@@ -249,10 +244,6 @@ iframe {
 	}
 }
 .tema {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	margin-bottom: 1rem;
 	transition: 0.4s ease;
 }
@@ -277,7 +268,7 @@ footer {
 	}
 }
 .rrss {
-	display: flex;
+	width: 100%;
 	flex-direction: row;
 	justify-content: space-between;
 }
@@ -332,9 +323,6 @@ footer p {
 		font-size: 2.75rem;
 	}
 	.header-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 		position: relative;
 		margin-top: 2rem;
 		margin-bottom: -1rem;
@@ -371,8 +359,7 @@ footer p {
 		}
 	}
 	.donde {
-		display: flex;
-		flex-flow: row wrap;
+		flex-direction: row;
 		justify-content: space-around;
 		margin-bottom: 4rem;
 		.donde-txt {
@@ -399,9 +386,7 @@ footer p {
 		margin: 0;
 	}
 	.temas .img-container {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
+		flex-direction: row;
 		.tema {
 			padding: 2rem;
 			flex: 1 1 35%;
@@ -410,12 +395,6 @@ footer p {
 	.cta {
 		clip-path: polygon(0 calc(0% + 10%), 100% 0%, 100% 100%, 0 100%);
 		padding: 6rem 0 6rem 0;
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
 		a i {
 			margin-left: 0.5rem;
 		}
@@ -425,12 +404,10 @@ footer p {
 		margin-top: -4rem;
 		padding: 0;
 		.container {
-			display: flex;
-			flex-flow: column wrap;
-			align-items: center;
 			justify-content: space-between;
 		}
 		.rrss {
+			width: auto;
 			max-width: 800px;
 			a {
 				margin-left: 2.25rem;
