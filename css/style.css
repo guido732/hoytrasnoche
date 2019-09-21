@@ -173,7 +173,6 @@ label {
   padding: 0;
   margin: 0;
   list-style: none;
-  color: white;
   -webkit-transition: 0.35s;
   transition: 0.35s;
 }
@@ -184,14 +183,14 @@ label {
 }
 
 .menu-items li:hover {
-  background-color: white;
+  background-color: #134869;
   border-radius: 0.4rem;
   -webkit-transition: 0.35s;
   transition: 0.35s;
 }
 
 .menu-items li:hover a {
-  color: #1a1a1a;
+  color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -253,6 +252,19 @@ iframe {
 
 .invitadxs .img-container {
   width: 100%;
+}
+
+.carousel-item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item-right img {
+  display: block;
+  position: relative;
+  margin-bottom: -8rem;
+  max-width: 400px;
 }
 
 .temas {
@@ -488,6 +500,34 @@ footer p {
         -ms-flex: 1 1 40%;
             flex: 1 1 40%;
   }
+  .carousel-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .item-left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 400px;
+            flex: 1 0 400px;
+    padding-right: 1rem;
+  }
+  .item-right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 400px;
+            flex: 1 0 400px;
+  }
+  .item-right img {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: -8rem;
+  }
   .temas {
     margin: 0;
   }
@@ -623,6 +663,27 @@ footer p {
   }
   .invitadxs .img-container img {
     max-width: 33.33%;
+  }
+  .carousel-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .item-left {
+    max-width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .item-right img {
+    margin-bottom: -6rem;
   }
   .temas .img-container {
     -webkit-box-pack: justify;

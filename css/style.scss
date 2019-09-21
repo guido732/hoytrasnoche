@@ -164,7 +164,6 @@ label {
 		padding: 0;
 		margin: 0;
 		list-style: none;
-		color: $text-clear;
 		transition: 0.35s;
 
 		a {
@@ -173,12 +172,12 @@ label {
 		}
 	}
 	li:hover {
-		background-color: $background;
+		background-color: $highlight2;
 		border-radius: $element-radius;
 		transition: 0.35s;
 
 		a {
-			color: $text-dark;
+			color: $text-clear;
 			transition: 0.5s;
 		}
 	}
@@ -230,9 +229,15 @@ iframe {
 		width: 100%;
 	}
 }
-// .integrantes {
-
-// }
+.carousel-item {
+	align-items: center;
+}
+.item-right img {
+	display: block;
+	position: relative;
+	margin-bottom: -8rem;
+	max-width: 400px;
+}
 .temas {
 	width: 100%;
 	h2 {
@@ -382,6 +387,24 @@ footer p {
 			flex: 1 1 40%;
 		}
 	}
+
+	.carousel-item {
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.item-left {
+		flex: 1 0 400px;
+		padding-right: 1rem;
+	}
+	.item-right {
+		flex: 1 0 400px;
+		img {
+			max-width: 500px;
+			margin: auto;
+			margin-bottom: -8rem;
+		}
+	}
 	.temas {
 		margin: 0;
 	}
@@ -506,6 +529,20 @@ footer p {
 			img {
 				max-width: 33.33%;
 			}
+		}
+	}
+	.carousel-item {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	.item-left {
+		max-width: 50%;
+		align-self: center;
+	}
+	.item-right {
+		img {
+			margin-bottom: -6rem;
 		}
 	}
 	.temas .img-container {
