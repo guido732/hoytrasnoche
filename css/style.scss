@@ -87,12 +87,12 @@ img {
 	margin-bottom: 1rem;
 	border-radius: $element-radius;
 	cursor: pointer;
-	transition: 0.35s;
+	transition: 0.35s !important;
 }
 .btn:hover {
 	background: $highlight2;
 	color: $text-clear;
-	transition: 0.35s;
+	transition: 0.35s !important;
 }
 
 .episodios,

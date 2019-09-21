@@ -68,15 +68,15 @@ img {
   margin-bottom: 1rem;
   border-radius: 0.4rem;
   cursor: pointer;
-  -webkit-transition: 0.35s;
-  transition: 0.35s;
+  -webkit-transition: 0.35s !important;
+  transition: 0.35s !important;
 }
 
 .btn:hover {
   background: #134869;
   color: white;
-  -webkit-transition: 0.35s;
-  transition: 0.35s;
+  -webkit-transition: 0.35s !important;
+  transition: 0.35s !important;
 }
 
 .episodios,
