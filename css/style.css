@@ -3,6 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,7 +26,7 @@ h1 {
   margin: 4rem 0 1rem 0;
 }
 
-h1 .strikethrough {
+.strikethrough {
   text-decoration: line-through;
 }
 
@@ -48,6 +49,45 @@ p {
 a {
   text-decoration: none;
   color: white;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  background: #64d2e3;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-align: center;
+  font-weight: 500;
+  display: inline-block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.btn:hover {
+  background: #134869;
+  color: white;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.episodios,
+.integrantes {
+  -webkit-clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% calc(100% - 4rem), 0 100%);
+          clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% calc(100% - 4rem), 0 100%);
+}
+
+.cta {
+  -webkit-clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% 100%, 0 100%);
 }
 
 nav {
@@ -124,6 +164,8 @@ label {
   margin: 0;
   list-style: none;
   color: white;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
 }
 
 .menu-items li a {
@@ -134,38 +176,18 @@ label {
 .menu-items li:hover {
   background-color: white;
   border-radius: 0.4rem;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
 }
 
 .menu-items li:hover a {
   color: #1a1a1a;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .container {
   margin: 0 1rem;
-}
-
-.btn {
-  background: #64d2e3;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #1a1a1a;
-  text-align: center;
-  font-weight: 500;
-  display: inline-block;
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  -webkit-transition: 0.35s !important;
-  transition: 0.35s !important;
-}
-
-.btn:hover {
-  background: #134869;
-  color: white;
-  -webkit-transition: 0.35s !important;
-  transition: 0.35s !important;
 }
 
 .header2 {
@@ -173,39 +195,34 @@ label {
 }
 
 .header2 img {
-  width: 100%;
   z-index: -1;
   margin-bottom: -6rem;
   margin-top: 1rem;
 }
 
-.episodios {
-  -webkit-clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% calc(100% - 4rem), 0 100%);
-          clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% calc(100% - 4rem), 0 100%);
-}
-
-.cta {
-  -webkit-clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% 100%, 0 100%);
-          clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% 100%, 0 100%);
-}
-
 .episodios,
-.cta {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#db0077), to(#37001e));
-  background-image: linear-gradient(#db0077, #37001e);
+.cta,
+.integrantes {
+  background: -webkit-gradient(linear, left top, left bottom, from(#db0077), to(#37001e));
+  background: linear-gradient(#db0077, #37001e);
   margin: 2rem 0;
   padding: 6rem 0 8rem 0;
 }
 
 .episodios h2,
-.cta h2 {
+.episodios p,
+.episodios h3,
+.cta h2,
+.cta p,
+.cta h3,
+.integrantes h2,
+.integrantes p,
+.integrantes h3 {
   color: white;
+  text-align: left;
 }
 
-.episodios .img-container,
-.episodios .iframe-container,
-.cta .img-container,
-.cta .iframe-container {
+.iframe-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,10 +233,7 @@ label {
   width: 100%;
 }
 
-.episodios .img-container iframe,
-.episodios .iframe-container iframe,
-.cta .img-container iframe,
-.cta .iframe-container iframe {
+iframe {
   width: 100%;
   margin-bottom: 1.5rem;
   border: none;
@@ -230,7 +244,6 @@ label {
 }
 
 .donde img {
-  width: 100%;
   margin-top: -8rem;
   z-index: 2;
 }
@@ -243,10 +256,6 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-}
-
-.invitadxs .img-container img {
   width: 100%;
 }
 

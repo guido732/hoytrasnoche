@@ -1,13 +1,9 @@
-// Debugging If no [propiedad] -> blur image
-// img:not([aria-label]) {
-// 	filter: blur(5px);
-// }
-
 // Reset
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 	// border: 1px solid red;
 }
 
@@ -16,13 +12,9 @@ $main-color: #f1f1f1;
 $background: white;
 $text-clear: white;
 $text-dark: rgb(26, 26, 26);
-// $highlight1: #00f3bb;
 $highlight1: #64d2e3;
-// $highlight2: #0000ec;
 $highlight2: #134869;
-// $gradient-bg: linear-gradient(#0000ff, #0000a3);
 $gradient-bg: linear-gradient(#db0077, #37001e);
-// $gradient-btn: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
 $gradient-btn: linear-gradient(330deg, #134869 0%, #64d2e3 100%);
 $element-radius: 0.4rem;
 
@@ -55,9 +47,9 @@ h1 {
 	font-size: 2.25rem;
 	line-height: 3rem;
 	margin: 4rem 0 1rem 0;
-	.strikethrough {
-		text-decoration: line-through;
-	}
+}
+.strikethrough {
+	text-decoration: line-through;
 }
 h2 {
 	@extend %font-sans;
@@ -77,6 +69,38 @@ p {
 a {
 	text-decoration: none;
 	color: white;
+}
+img {
+	width: 100%;
+}
+
+.btn {
+	background: $highlight1;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $text-dark;
+	text-align: center;
+	font-weight: 500;
+	display: inline-block;
+	width: 100%;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border-radius: $element-radius;
+	cursor: pointer;
+	transition: 0.35s;
+}
+.btn:hover {
+	background: $highlight2;
+	color: $text-clear;
+	transition: 0.35s;
+}
+
+.episodios,
+.integrantes {
+	clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% calc(100% - 4rem), 0 100%);
+}
+.cta {
+	clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% 100%, 0 100%);
 }
 
 // Specific element properties
@@ -138,6 +162,8 @@ label {
 		margin: 0;
 		list-style: none;
 		color: $text-clear;
+		transition: 0.35s;
+
 		a {
 			display: block;
 			padding: 1rem;
@@ -146,8 +172,11 @@ label {
 	li:hover {
 		background-color: $background;
 		border-radius: $element-radius;
+		transition: 0.35s;
+
 		a {
 			color: $text-dark;
+			transition: 0.5s;
 		}
 	}
 }
@@ -155,66 +184,42 @@ label {
 .container {
 	margin: 0 1rem;
 }
-.btn {
-	background: $highlight1;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: $text-dark;
-	text-align: center;
-	font-weight: 500;
-	display: inline-block;
-	width: 100%;
-	padding: 1rem;
-	margin-bottom: 1rem;
-	border-radius: $element-radius;
-	cursor: pointer;
-	transition: 0.35s !important;
-}
-.btn:hover {
-	background: $highlight2;
-	// background: $gradient-btn;
-	color: $text-clear;
-	transition: 0.35s !important;
-}
+
 .header2 {
 	position: relative;
 	img {
-		width: 100%;
 		z-index: -1;
 		margin-bottom: -6rem;
 		margin-top: 1rem;
 	}
 }
-.episodios {
-	clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% calc(100% - 4rem), 0 100%);
-}
-.cta {
-	clip-path: polygon(0 calc(0% + 4rem), 100% 0%, 100% 100%, 0 100%);
-}
+
 .episodios,
-.cta {
-	h2 {
+.cta,
+.integrantes {
+	h2,
+	p,
+	h3 {
 		color: $text-clear;
+		text-align: left;
 	}
-	background-image: $gradient-bg;
+	background: $gradient-bg;
 	margin: 2rem 0;
 	padding: 6rem 0 8rem 0;
-	.img-container,
-	.iframe-container {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		iframe {
-			width: 100%;
-			margin-bottom: 1.5rem;
-			border: none;
-		}
-	}
+}
+.iframe-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+iframe {
+	width: 100%;
+	margin-bottom: 1.5rem;
+	border: none;
 }
 .donde {
 	position: relative;
 	img {
-		width: 100%;
 		margin-top: -8rem;
 		z-index: 2;
 	}
@@ -224,11 +229,11 @@ label {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		img {
-			width: 100%;
-		}
 	}
 }
+// .integrantes {
+
+// }
 .temas {
 	display: flex;
 	width: 100%;
