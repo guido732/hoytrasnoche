@@ -174,7 +174,55 @@
 		<section class="integrantes" id="integrantes">
 			<div class="container">
 				<h2>Integrantes</h2>
-				<div class="carousel-container">
+				<div class="carousel-container slideshow-container">
+					<div class="mySlides fade">
+						<div class="carousel-item flex">
+							<div class="item-left">
+								<h3>Fiorella Sargenti</h3>
+								<p>
+									Fiorella "Florencia" Sargenti, (Ushuaia, Tierra del Fuego, Argentina, 21 de
+									diciembre de 1984) es una periodista feminista especializada en cultura pop y
+									conductora de radio.<br />
+									Según Fiorella, los temas en los que ella se especializa le sirven como excusa para
+									hablar sobre prácticamente cualquier tópico de la actualidad.​ Luego de cursar sus
+									estudios secundarios en Ushuaia, Sargenti se mudó a San Justo para estudiar en la
+									Universidad de Buenos Aires donde actualmente reside y trabaja. <br />
+									Actualmente es conductora de Sensacional Éxito, un programa radial en Metro junto
+									con Luciano Banchero, además de conducir distintos podcasts y escribir en La Cosa
+									Cine.
+								</p>
+							</div>
+							<div class="item-right">
+								<img src="./img/santiago_calori.png" alt="Fiorella Sargenti" />
+							</div>
+						</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="carousel-item flex">
+							<div class="item-left">
+								<h3>Santiago Calori</h3>
+								<p>
+									Santiago Calori, (Buenos Aires 1977) es un periodista, guionista y director de cine
+									Argentino. Conduce "Sexy Pipol" junto con Clemente Cancela y Leo Gabes, de 9 a 13
+									Lunes a Viernes por Radio Congo FM. <br />
+									Dirigió el documental <em>"Un importante preestreno"</em> sobre los usos y las
+									costumbres alrededor del cine en Argentina de las últimas décadas. El periodista y
+									guionista fue parte de la primera generación de la revista La Cosa antes de cumplir
+									los 20 años y de ahí pasó a la radio para convertirse en comentarista de cine de
+									distintos programas.
+								</p>
+							</div>
+							<div class="item-right">
+								<img src="./img/santiago_calori.png" alt="Fiorella Sargenti" />
+							</div>
+						</div>
+					</div>
+
+					<!-- Next and previous buttons -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 					<!-- <div class="carousel-item flex">
 						<div class="item-left">
 							<h3>Fiorella Sargenti</h3>
@@ -193,7 +241,7 @@
 							<img src="./img/santiago_calori.png" alt="Fiorella Sargenti" />
 						</div>
 					</div> -->
-					<div class="carousel-item flex">
+					<!-- <div class="carousel-item flex">
 						<div class="item-left">
 							<h3>Santiago Calori</h3>
 							<p>
@@ -210,7 +258,7 @@
 						<div class="item-right">
 							<img src="./img/santiago_calori.png" alt="Fiorella Sargenti" />
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>
@@ -280,6 +328,40 @@
 				delay: 0, // values from 0 to 3000, with step 50ms
 				duration: 600
 			});
+		</script>
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			// Next/previous controls
+			function plusSlides(n) {
+				showSlides((slideIndex += n));
+			}
+
+			// Thumbnail image controls
+			function currentSlide(n) {
+				showSlides((slideIndex = n));
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {
+					slideIndex = 1;
+				}
+				if (n < 1) {
+					slideIndex = slides.length;
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex - 1].style.display = "block";
+				dots[slideIndex - 1].className += " active";
+			}
 		</script>
 	</body>
 </html>

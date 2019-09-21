@@ -254,6 +254,72 @@ iframe {
   width: 100%;
 }
 
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
+.next {
+  right: 0%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .carousel-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -500,6 +566,10 @@ footer p {
         -ms-flex: 1 1 40%;
             flex: 1 1 40%;
   }
+  .prev,
+  .next {
+    top: 70%;
+  }
   .carousel-item {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -516,7 +586,9 @@ footer p {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 400px;
             flex: 1 0 400px;
-    padding-right: 1rem;
+    padding-top: 2rem;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .item-right {
     -webkit-box-flex: 1;
@@ -678,9 +750,6 @@ footer p {
   }
   .item-left {
     max-width: 50%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
   .item-right img {
     margin-bottom: -6rem;
