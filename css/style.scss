@@ -172,11 +172,11 @@ label {
 		}
 	}
 	li:hover {
-		background-color: $highlight2;
-		border-radius: $element-radius;
 		transition: 0.35s;
 
 		a {
+			border-radius: $element-radius;
+			background-color: $highlight2;
 			color: $text-clear;
 			transition: 0.5s;
 		}
@@ -230,40 +230,32 @@ iframe {
 	}
 }
 
-//  carousel
-
 .slideshow-container {
-	// max-width: 1000px;
 	position: relative;
 	margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
 	display: none;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
 	cursor: pointer;
 	position: absolute;
 	top: 60%;
 	width: auto;
-	// margin-top: -22px;
 	padding: 16px;
 	color: white;
 	font-weight: bold;
 	font-size: 18px;
 	transition: 0.6s ease;
-	// user-select: none;
 }
 
 .next {
 	right: 0%;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
 	background-color: rgba(0, 0, 0, 0.3);
@@ -274,33 +266,12 @@ iframe {
 	background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
 	-webkit-animation-name: fade;
 	-webkit-animation-duration: 1.5s;
 	animation-name: fade;
 	animation-duration: 1.5s;
 }
-
-@-webkit-keyframes fade {
-	from {
-		opacity: 0.4;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes fade {
-	from {
-		opacity: 0.4;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-// carousel
 
 .carousel-item {
 	align-items: center;
@@ -389,6 +360,24 @@ footer p {
 	}
 	100% {
 		@include transform(rotate(360deg));
+	}
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.2;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.2;
+	}
+	to {
+		opacity: 1;
 	}
 }
 
@@ -584,7 +573,8 @@ footer p {
 	.btn {
 		padding: 1rem 3rem;
 	}
-	.episodios {
+	.episodios,
+	.integrantes {
 		clip-path: polygon(0 calc(0% + 6rem), 100% 0%, 100% calc(100% - 6rem), 0 100%);
 		padding: 8rem 0 10rem 0;
 	}
@@ -620,7 +610,7 @@ footer p {
 	}
 	.item-right {
 		img {
-			margin-bottom: -6rem;
+			margin-bottom: -8rem;
 		}
 	}
 	.temas .img-container {

@@ -183,13 +183,13 @@ label {
 }
 
 .menu-items li:hover {
-  background-color: #134869;
-  border-radius: 0.4rem;
   -webkit-transition: 0.35s;
   transition: 0.35s;
 }
 
 .menu-items li:hover a {
+  border-radius: 0.4rem;
+  background-color: #134869;
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -259,12 +259,10 @@ iframe {
   margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -283,7 +281,6 @@ iframe {
   right: 0%;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.3);
@@ -294,30 +291,11 @@ iframe {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .carousel-item {
@@ -478,6 +456,24 @@ footer p {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -714,7 +710,8 @@ footer p {
   .btn {
     padding: 1rem 3rem;
   }
-  .episodios {
+  .episodios,
+  .integrantes {
     -webkit-clip-path: polygon(0 calc(0% + 6rem), 100% 0%, 100% calc(100% - 6rem), 0 100%);
             clip-path: polygon(0 calc(0% + 6rem), 100% 0%, 100% calc(100% - 6rem), 0 100%);
     padding: 8rem 0 10rem 0;
@@ -752,7 +749,7 @@ footer p {
     max-width: 50%;
   }
   .item-right img {
-    margin-bottom: -6rem;
+    margin-bottom: -8rem;
   }
   .temas .img-container {
     -webkit-box-pack: justify;
