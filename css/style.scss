@@ -88,11 +88,11 @@ img {
 	border-radius: $element-radius;
 	cursor: pointer;
 	transition: 0.35s !important;
-}
-.btn:hover {
-	background: $highlight2;
-	color: $text-clear;
-	transition: 0.35s !important;
+	&:hover {
+		background: $highlight2;
+		color: $text-clear;
+		transition: 0.35s !important;
+	}
 }
 
 .episodios,
@@ -170,15 +170,15 @@ label {
 			display: block;
 			padding: 1rem;
 		}
-	}
-	li:hover {
-		transition: 0.35s;
+		&:hover {
+			transition: 0.35s;
 
-		a {
-			border-radius: $element-radius;
-			background-color: $highlight2;
-			color: $text-clear;
-			transition: 0.5s;
+			a {
+				border-radius: $element-radius;
+				background-color: $highlight2;
+				color: $text-clear;
+				transition: 0.5s;
+			}
 		}
 	}
 }
@@ -211,11 +211,12 @@ label {
 }
 .iframe-container {
 	width: 100%;
-}
-iframe {
-	width: 100%;
-	margin-bottom: 1.5rem;
-	border: none;
+	iframe {
+		height: 15rem;
+		width: 100%;
+		margin-bottom: 1.5rem;
+		border: none;
+	}
 }
 .donde {
 	position: relative;
